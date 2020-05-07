@@ -17,7 +17,7 @@ class GradeTable{
       course.textContent = grades[i].course;
       grade.textContent = grades[i].grade;
       newRow.append(name, course, grade);
-      tbody.append(newRow);
+      tbody.append(newRow)
     }
   }
 }

@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Student Grade Table</h1>
+    <div class="row">
+      <h1 class="col">Student Grade Table</h1>
+      <div class="col">
+        <h2>Average Grade<span class="badge badge-dark"></span></h2>
+      </div>
+    </div>
   </header>
   <main>
     <table class="table">
@@ -32,6 +38,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="components/page-header.js"></script>
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
   <script src="main.js"></script>
