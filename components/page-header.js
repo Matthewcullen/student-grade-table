@@ -4,6 +4,8 @@ class Pageheader{
 
   }
   updateAverage(newAverage){
+    var averageNumber = document.querySelector('.badge');
+    averageNumber.textContent=newAverage;
     console.log(newAverage)
   }
 }

@@ -5,9 +5,7 @@ div.col{
   justify-content: flex-end;
 }
 
-.gradeNumber{
-  background-color: grey;
-  color: white;
+.badge{
   margin-right: 3rem;
 }
 
@@ -16,7 +14,7 @@ div.col{
 
 }
 header{
-  margin-top: 3rem;
+  margin-top: 3rem
 }
 
 h1{

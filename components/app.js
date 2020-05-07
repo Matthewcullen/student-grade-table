@@ -15,7 +15,8 @@ class App {
     for(var i=0;i<grades.length;i++){
       sum+=grades[i].grade;
     }
-    this.pageHeader.updateAverage=(sum/grades.length);
+    var average = (sum/grades.length)
+    this.pageHeader.updateAverage(average);
   }
   getGrades(){
     $.ajax({
