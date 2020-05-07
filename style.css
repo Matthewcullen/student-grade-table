@@ -1,0 +1,30 @@
+div.col{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.gradeNumber{
+  background-color: grey;
+  color: white;
+  margin-right: 3rem;
+}
+
+.table{
+  margin: 3rem;
+
+}
+header{
+  margin-top: 3rem;
+}
+
+h1{
+  margin-left: 3rem;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+
+}
