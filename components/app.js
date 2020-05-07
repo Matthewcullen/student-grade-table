@@ -1,4 +1,4 @@
-class App{
+class App {
   constructor(){
     this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this)
     this.handleGetGradesError = this.handleGetGradesError.bind(this)
@@ -15,13 +15,13 @@ class App{
       url: "https://sgt.lfzprototypes.com/api/grades",
       data: "none",
       headers:{
-        X - Access - Token:"xX0ypzyk"
+        "X-Access-Token":"xX0ypzyk"
       },
-      success: handleGetGradesSuccess,
-      error: handleGetGradesError
+      success: this.handleGetGradesSuccess,
+      error: this.handleGetGradesError
     })
   }
-  Start(){
+  start(){
     this.getGrades();
   }
 }
