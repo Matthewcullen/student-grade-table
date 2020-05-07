@@ -6,6 +6,15 @@ class App {
     this.pageHeader=pageHeader;
     this.gradeForm=gradeForm;
   }
+  handleCreateGradeSuccess(){
+    this.getGrades();
+  }
+  handleCreateGradeError(error){
+    console.error(error);
+  }
+  createGrade(name, course, grade){
+    console.log(name,course,grade);
+  }
   handleGetGradesError(error){
     console.log(error);
   }
