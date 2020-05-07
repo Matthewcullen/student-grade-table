@@ -1,2 +1,5 @@
 // APIKey = xX0ypzyk
-var firstTest = new App
+
+var tableElement = document.querySelector('.table');
+var gradeTable = new GradeTable(tableElement);
+var firstTest = new App(gradeTable);
