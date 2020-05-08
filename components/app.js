@@ -4,6 +4,7 @@ class App {
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
     this.handleCreateGradeError=this.handleGetGradesError.bind(this);
     this.handleCreateGradeSuccess=this.handleGetGradesSuccess.bind(this);
+    this.createGrade=this.createGrade.bind(this);
     this.gradeTable = gradeTable;
     this.pageHeader=pageHeader;
     this.gradeForm=gradeForm;
@@ -43,7 +44,7 @@ class App {
     })
   }
   start(){
-    this.getGrades();
     this.gradeForm.onSubmit(this.createGrade)
+    this.getGrades();
   }
 }
