@@ -5,9 +5,21 @@ class App {
     this.handleCreateGradeError=this.handleGetGradesError.bind(this);
     this.handleCreateGradeSuccess=this.handleGetGradesSuccess.bind(this);
     this.createGrade=this.createGrade.bind(this);
+    this.handleDeleteGradeError=this.handleDeleteGradeError.bind(this);
+    this.handleDeleteGradeSuccess=this.handleDeleteGradeSuccess.bind(this);
+    this.deleteGrade=this.deleteGrade.bind(this);
     this.gradeTable = gradeTable;
     this.pageHeader=pageHeader;
     this.gradeForm=gradeForm;
+  }
+  handleDeleteGradeSuccess(){
+    this.getGrades();
+  }
+  handleDeleteGradeError(error){
+    console.error(error)
+  }
+  deleteGrade(id){
+    console.log(id);
   }
   handleCreateGradeSuccess(){
     this.getGrades();
