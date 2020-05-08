@@ -1,9 +1,35 @@
 class App {
-  constructor(gradeTable,pageHeader){
-    this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this)
-    this.handleGetGradesError = this.handleGetGradesError.bind(this)
+  constructor(gradeTable,pageHeader,gradeForm){
+    this.handleGetGradesSuccess = this.handleGetGradesSuccess.bind(this);
+    this.handleGetGradesError = this.handleGetGradesError.bind(this);
+    this.handleCreateGradeError=this.handleGetGradesError.bind(this);
+    this.handleCreateGradeSuccess=this.handleGetGradesSuccess.bind(this);
+    this.createGrade=this.createGrade.bind(this);
     this.gradeTable = gradeTable;
     this.pageHeader=pageHeader;
+    this.gradeForm=gradeForm;
+  }
+  handleCreateGradeSuccess(){
+    this.getGrades();
+  }
+  handleCreateGradeError(error){
+    console.error(error);
+  }
+  createGrade(name, course, grade){
+    $.ajax({
+      method: "POST",
+      url: "https://sgt.lfzprototypes.com/api/grades",
+      data: {
+        "name": name,
+        "course": course,
+        "grade": grade
+      },
+      headers: {
+        "X-Access-Token": "xX0ypzyk"
+      },
+      success: this.handleCreateGradesSuccess,
+      error: this.handleCreateGradesError
+    })
   }
   handleGetGradesError(error){
     console.log(error);
@@ -31,6 +57,7 @@ class App {
     })
   }
   start(){
+    this.gradeForm.onSubmit(this.createGrade)
     this.getGrades();
   }
 }

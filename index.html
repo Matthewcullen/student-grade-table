@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +17,8 @@
       </div>
     </div>
   </header>
-  <main>
-    <table class="table">
+  <main class="row">
+    <table class="col-8 table">
       <thead>
         <tr>
           <th scope="col">Student Name</th>
@@ -29,6 +30,31 @@
 
       </tbody>
     </table>
+    <aside class="col">
+      <form action="">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="nameAddonWrapping"></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Name" name="name">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="courseAddonWrapping"></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Course" name="course">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="gradeAddonWrapping" ></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Grade" name="grade">
+          </div>
+          <div class="input-group">
+            <input type="submit" value="Add">
+            <input type="reset" value="Cancel">
+          </div>
+        </div>
+
+      </form>
+    </aside>
   </main>
 
 
@@ -41,6 +67,7 @@
   <script src="components/page-header.js"></script>
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
+  <script src="components/grade-form.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

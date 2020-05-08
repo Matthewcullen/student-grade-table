@@ -5,7 +5,7 @@ div.col{
   justify-content: flex-end;
 }
 
-.badge{
+h2{
   margin-right: 3rem;
 }
 
@@ -23,6 +23,6 @@ h1{
 
 main{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
 }
