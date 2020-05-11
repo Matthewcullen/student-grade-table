@@ -24,32 +24,43 @@
           <th scope="col">Student Name</th>
           <th scope="col">Course</th>
           <th scope="col">Grade</th>
+          <th scope="col">Operations</th>
+
         </tr>
       </thead>
       <tbody class="tBody">
 
       </tbody>
     </table>
+    <p class="d-none noGrades">No Grades Recorded.</p>
+
     <aside class="col">
       <form action="">
         <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="nameAddonWrapping"></span>
+          <div class="input-group mb-2 d-flex">
+            <label class="sr-only" for="name">Name</label>
+            <div class="input-group-text">
+              <i class="fas fa-user"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Name" name="name">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="courseAddonWrapping"></span>
+            <input class="flex-grow-1" type="text" placeholder="Name" id="name" name="name">
+          </div>
+          <div class="input-group mb-2 d-flex">
+            <label class="sr-only" for="course">Course</label>
+            <div class="input-group-text">
+              <i class="far fa-list-alt"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Course" name="course">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="gradeAddonWrapping" ></span>
+            <input class="flex-grow-1" type="text" placeholder="Course" id="course" name="course">
+          </div>
+          <div class="input-group mb-2 d-flex">
+            <label class="sr-only" for="grade">Grade</label>
+            <div class="input-group-text">
+              <i class="fas fa-graduation-cap"></i>
             </div>
-            <input type="text" class="form-control" placeholder="Grade" name="grade">
+            <input class="flex-grow-1" type="number" placeholder="Grade" id="grade" name="grade">
           </div>
           <div class="input-group">
-            <input type="submit" value="Add">
-            <input type="reset" value="Cancel">
+            <button class="btn btn-secondary shadow col offset-6 mr-1" type="submit">Add</button>
+            <button class="btn btn-secondary shadow col" type="reset">Cancel</button>
           </div>
         </div>
 
